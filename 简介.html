@@ -1,0 +1,50 @@
+<!-- html  根标签 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- head标签的内容不会直接显示在页面上 是设置一些属性给浏览器的 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- body 用户可见的部分 -->
+    <!-- h1 一级标题 对于搜索引擎来说 h1的重要性仅次于title 会影响页面在搜索引擎中的排名 页面中只能写一个 -->
+    <!-- 一共有六级标签 h1 ~ h6 基本只使用h1 h2 h3 -->
+    <h1>
+        <!-- 属性在开始标签中设置 单双引号都可以-->
+        <!-- size 最大为7  -->
+        <!-- font标签 不赞成使用  属于表现的东西 用CSS 样式去设置 -->
+        这是网页的<font color='red' size='3'>标题</font>
+    </h1>
+    <h2>标题</h2>
+    <h3>标题</h3>
+    <h4>标题</h4>
+    <h5>标题</h5>
+    <h6>标题</h6>
+    <!-- 段落标签 标签中文字 默认独占一行 
+    换行或者多个空格 都会当成一个空格处理 
+    使用br标签换行 br是自结束标签 -->
+    <p>
+        这里是一个段落   <br> 这里是一个段落
+    </p>
+    <p>
+        这里是一个段落
+    </p>
+    <!-- hr 自结束标签 生成一条水平线 -->
+    <hr>
+    <!-- 大于号 小于号 是不能直接使用的 比如 <b> 与标签形式相同
+        需要使用转义字符（也叫实体）
+    实体语法：&实体名字;
+    < &lt;
+    > &gt;
+    空格 &nbsp; 
+    版权符号 &copy;-->
+    a&lt;b&gt;c
+    <p>&copy;一个有很多空格的&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;段落</p>
+    
+</body>
+
+</html>
