@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 使用伪元素表示元素中的一些特殊位置 
+			语法：一个或者两个冒号都可以*/
+			/* 第一个字符 */
+			p:first-letter {
+				color: red;
+				font-size: 50px;
+			}
+
+			/* 第一行 */
+			p::first-line {
+				background-color: yellow;
+			}
+			/* 元素最前边的部分 before一般都结合content这个样式一起使用 */
+			p::before {
+				content: "我会出现在在最前边";
+				color: #7FFFD4;
+			}
+			
+			p::after {
+				content: "我会出现在最后边";
+				color: #7FFFD4;
+			}
+		</style>
+	</head>
+	<body>
+		<p>我是一个段落,好长一个段落,好长一个段落,好长一个段落,好长一个段落,好长一个段落,好长一个段落,好长一个段落,好长一个段落,好长一个段落,好长一个段落,好长一个段落,好长一个段落</p>
+	</body>
+</html>
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>工作中文件名尽量不用中文，用中文路径会出问题</title>
+		<style type="text/css">
+			/* 元素选择器 选择页面中所有指定元素 */
+			p {
+				color: red;
+			}
+			h1 {
+				color: antiquewhite;
+			}
+			/* id选择器 id唯一*/
+			#p1 {
+				font-size: 20px;
+			}
+			
+			/* 类选择器
+			class和id类似 class可以重复 
+			
+			语法：.选择器{}
+			*/
+			.p2{
+				font-size: 30px;
+			}
+			.hello {
+				background-color: bisque;
+			}
+			
+			/* 选择器分组 同时选中多个选择器对应的元素 
+			语法 ：选择器1，选择器2，选择器3{}*/
+			#p1, .p2, h1 {
+				background-color: yellow;
+			}
+			
+			/* 通配选择器 选择页面中所有元素
+			 语法：*{}
+			 */
+			* {
+				color: red;
+			}
+			
+			/* 复合选择器 选中同时满足多个选择器的元素
+			语法：选择器1选择器2{}
+			class为cp3 的span元素
+			*/	
+			span.cp3 {
+				color: blue;
+			}
+			/* id选择器不建议使用复合选择器 */
+			p#p1 {
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h1>悯农</h1>
+		<p>锄禾日党务</p>
+		<p id="p1">锄禾日党务</p>
+		<p class="p2">锄禾日党务</p>
+		<p class="p2">锄禾日党务</p>
+		<!-- 可以给一个元素 设置多个class 空格隔开 -->
+		<p class="p2 hello">锄禾日党务</p>
+		<p id="p3" class="cp3">锄禾日党务</p>
+		<span class="cp3">
+			汗滴禾下土
+		</span>
+		<span>
+			谁知盘中餐
+		</span>
+		<p>锄禾日党务</p>
+		
+	</body>
+</html>

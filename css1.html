@@ -6,13 +6,17 @@
     <title>Document</title>
     <!-- 内部样式 只对当前页面起作用 -->
     <style type="text/css">
-    /* p 选择器 */
+
+    /* p 选择器：选中页面中指定的元素 并将声明块中的样式应用到选择器对应的元素上
+      {} 声明块: 名值对结构 称为一个声明 多个声明使用分号隔开*/
         p {
             color: rebeccapurple;
             font-weight: bold;
         }
     </style>
-    <!-- 外部样式表 通过link标签引入当前页面-->
+
+    <!-- 外部样式表 通过link标签引入当前页面 结构和表现分离
+        可以利用浏览器的缓存 提高访问速度-->
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>

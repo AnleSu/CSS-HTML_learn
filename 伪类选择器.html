@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 伪类用来表示元素的一种特殊状态 比如 访问过的超链接 获取焦点的文本框
+			*/
+			/* 没访问过的超链接 */
+			a:link {
+				color: yellowgreen;
+			}
+
+			/* 访问过的链接 
+		   浏览器通过历史记录判断一个链接是否访问过
+		   由于涉及到用户隐私 使用visited伪类只能设置字体颜色 */
+			a:visited {
+				color: #FF0000;
+				/* 无效 */
+				background-color: #7FFFD4;
+			}
+
+			/* 鼠标移入 */
+			a:hover {
+				color: #0000FF;
+			}
+
+			/* 超链接被点击时的状态 */
+			a:active {
+				color: #FFFF00;
+			}
+			/* 其他标签也可以使用  hover和active */
+			p:hover {
+				background-color: yellow;
+			}
+			/* 获取焦点 */
+			input:focus {
+				background-color: yellow;
+			}
+			
+			/* 光标选中的内容 
+			在火狐中不兼容 需要使用moz*/	
+			p::-moz-selection {
+				background-color: #FF0000;
+			}
+				
+			p::selection {
+				background-color: #FF0000;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<a href="http://www.baidu.com">我是一个访问过的超链接</a>
+		<br><br>
+		<a href="http://www.baidu123456.com">我是一个超链接</a>
+		<p>我是一个段落</p>
+		<input type="text" name="" id="" value="" />
+	</body>
+</html>

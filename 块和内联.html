@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!--块元素主要用来做布局  内联元素主要用来选中文本设置样式
+		 一般用块元素包裹内联元素
+		 a元素可以包含任何元素 除了a元素
+		 p元素里面不可以包含任何块元素-->
+		 
+		<div id="" style="background-color: red; width: 200px;">
+			我是一个div，div是一个块元素，会独占一行的元素
+		</div>
+		<div id="" style="background-color: yellow;">
+			我是一个div，无论内容多少，都会独占一行；
+			div元素没有语义 只是用来给页面布局的
+			一个div 一块布局
+		</div>
+		<p>我是一个p标签 也是块元素</p>
+		<h1>h1标题 块元素</h1>
+		<h2>h2标题 块元素</h2>
+		<h3>h3标题 块元素</h3>
+		<hr >
+		
+		<span>
+			内联元素 （行内元素）
+			只占自身大小 不会占用一整行
+		</span>
+		<span>再来一个span 一行放不下会自动换行</span>
+		<a href="">a也是内联元素</a>
+		<a href="">
+			<div id="">
+				被a包含么得问题
+			</div>
+		</a>
+		<a href="">
+			<a href="">a包含a</a>
+		</a>
+		<iframe src="" width="" height=""></iframe>
+		<img src="img/东风破2.png" >
+		
+		
+		
+	</body>
+</html>
