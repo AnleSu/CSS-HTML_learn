@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>只关心语义不关心样式</title>
+	</head>
+	<body>
+		<!-- 
+		 em 表示语气上的强调 默认斜体
+		 strong  表示内容上的强调 比em更强烈 默认粗体
+		 -->
+		<p>
+			<strong>不要靠近僵尸</strong>
+			他们只是<em>看起来</em>很友好，其实是为了吃掉你的胳膊！
+		</p>
+		
+		<p>
+			<!-- 
+			 i标签： 斜体
+			 b标签： 加粗 
+			 纯表现的标签 无语义-->
+			<i>我是I标签的内容</i>
+			<b>我是B标签的内容 </b>
+		</p>
+		
+		<!-- 
+		 small标签中的内容会比他的父元素的字体小一些，用来表示一些细则类的内容
+		 -->
+		<p>
+			我是p标签中的内容
+			<small>我是small标签中的内容</small>
+		</p>
+		<!-- big  字体变大 无语义 -->
+		<p>
+			我是p标签中的内容
+			<big>我是big标签中的内容</big>
+		</p>
+		
+		<!-- 
+		 加书名号的内容都可以用cite标签 表示参考内容 比如书名  歌名 电影名。。。
+		 -->
+		<p>
+			
+			<cite>《论语》</cite>是我最喜欢的一本书
+		</p>
+		<!-- q标签 表示一个短的引用 浏览器默认添加引号
+		 JS 通过first-letter添加引号-->
+		<p>
+			子曰：<q>学而时习之</q>
+		</p>
+		
+		<div>
+			子曰：<blockquote>
+				我是一个长引用（块级引用 独占一行）
+			</blockquote>
+		</div>
+		
+		<p>
+			<!-- sup 上标签 
+				 sub 下标签-->
+			2 <sup>3</sup>
+		</p>
+		<p>
+			赵薇<sup><a href="#">[1]</a></sup>
+		</p>
+		
+		<p>H<sub>2</sub>O</p>
+		<!-- del 表示一个删除的内容 自动添加删除线 -->
+		<p><del>17.76</del>  <br>
+			15.54
+		</p>
+		
+		<!-- ins 表示一个插入的内容 自动添加下划线-->
+		<p>
+			我们的老师 <ins>真好</ins>啊！
+		</p>
+		
+		<!-- 页面中直接编写一些代码 -->
+		<!-- pre 预格式标签 会保存代码中的格式 不会忽略多个空格 -->
+		<pre>
+			windows.onload = function () {
+				alert("hello");
+			}
+		</pre>
+		<!-- code 专门用来表示代码 -->
+		<code>
+			windows.onload = function () {
+				alert("hello");
+			}
+		</code>
+		
+		<!-- 一般结合使用 -->
+		<pre>
+			<code>
+				windows.onload = function () {
+					alert("hello");
+				}
+			</code>
+			
+		</pre>
+	</body>
+</html>

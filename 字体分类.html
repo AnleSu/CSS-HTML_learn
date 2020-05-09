@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.p1 {
+				/* 斜体 italic  italic 都是斜体效果 用哪个枚举设置效果都一样*/
+				font-style: italic;
+				/* 粗体 更细 lighter  100 ~ 900  之间的九个值  但是用户计算机中同一个字体不会同一个字体有多个版本 所以可能300和200效果相同*/
+				font-weight: lighter;
+				/* 小型大写字母  */
+				font-variant: small-caps;
+			}
+			.p2 {
+				/* 简写样式  字体倒数第一 大小倒数第二 必须写 其他可选
+					简写 性能更高 浏览器只需解析一次*/
+				font: 3.125rem "rage italic";
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 字体有五大类：
+		serif 衬线字体 
+		sans-serif -->
+		<p style="font-size: 50px; font-family: serif;">衬线字体：我是一段文字 ABCDEFG abcdefg</p>
+		<p style="font-size: 50px; font-family: sans-serif;">f非衬线字体：我是一段文字 ABCDEFG abcdefg</p>
+		<p class="p1">我是一段文字 ABCDEFG abcdefg</p>
+		<p class="p2">我是一段文字 ABCDEFG abcdefg</p>
+		
+	</body>
+</html>
