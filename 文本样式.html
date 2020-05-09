@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.p1 {
+				/* 设置大小写 
+				none: 默认
+				capitalize：首字母大写 通过空格识别单词
+				uppercase: 所有字母都大写
+				lowercase: 所有字母都小写
+				*/
+				text-transform: lowercase;
+				/* 文本修饰 
+				none: 默认
+				underline: 下划线
+				overline: 上划线
+				line-through: 中间穿过的线 删除线*/
+				text-decoration: none;
+				/* 字符间距 对中英文都有效果*/
+				letter-spacing: 2px;
+				/* 单词间距 其实就是设置空格的间距 */
+				word-spacing: 20px;
+				/* 文本对齐 justify:两端对齐 通过调整文本之间的空格大小 达到两端对齐的效果*/
+				text-align: justify;
+				/* 首行缩进  使用em单位设置 字体大小改变 可自适应缩进像素 
+					设置为负值 则向左缩进 比如可以把文字藏起来 用户不可见 但是搜索引擎可见*/
+				text-indent: 2em;
+			}
+			a {
+				/* a标签的decoration 默认为overline 可设置为none去掉下划线*/
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#">超链接默认有下划线</a>
+		<p class="p1">
+			"We should start back",Gared urged as the 
+		</p>
+	</body>
+</html>

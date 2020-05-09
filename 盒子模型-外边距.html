@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.box1 {
+				width: 100px;
+				height: 100px;
+				background-color: #bfa;
+				border: 10px red solid;
+				/* 外边距 当前盒子和其它盒子之间的距离 不影响盒子的可见框大小 而会影响盒子的位置
+					设置上左边距 则会改变当前盒子的位置
+					设置右下边距 则会改变其他盒子的位置
+					
+					都可以设置为负值  
+					
+					- 设置为auto 一般只设置给水平方向  左右margin设置为auto 则外边距会设置为最大
+					- 左右都设置为auto 则水平居中
+					- 垂直方向设置为auto 则外边距为0
+					*/
+				margin-top: 100px;
+				margin-left: auto;
+				/* 可以认为是外边距的最小值 如果和其它盒子距离远大于外边距 则不会有什么影响 */
+				margin-right: auto;
+				margin-bottom: 100px;
+				
+				/* 简写 */
+				margin: 10px 20px 30px 40px;
+			}
+			
+			/* 垂直外边距重叠 
+			 - 垂直方向兄弟元素的相邻(必须相邻 中间加个字母a就不会重叠了)外边距 会取最大值 而不取和
+			 box1 margin-bottom: 100px; 和 box2 的 margin-top: 100px;  最终两个div的间隙是100*/
+			.box2 {
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+				margin-top: 100px;
+			}
+			/* 如果父子元素的垂直外边距相邻 也会重叠 子元素设置margin 父元素也动 */
+			.box3 {
+				width: 200px;
+				height: 200px;
+				background-color: yellowgreen;
+				
+				/* 解决外边距重叠 
+				1. 设置border padding  使元素不相邻*/
+				border: 1px solid red;
+				padding: 1px;
+				
+			}
+			
+			.box4 {
+				width: 100px;
+				/*height: 0  解决外边距重叠  */
+				height: 100px;
+				background-color: yellow;
+				margin-top: 100px;
+				/* 解决外边距重叠 
+				2.给父元素设置padding 但是padding会影响可见框的宽高 所以要从原宽高中剪去padding的宽高 */
+				padding-top: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			
+		</div>
+		
+		a
+		<div class="box2">
+			
+		</div>
+		
+		<div class="box3">
+			<div class="box4">
+				
+			</div>
+		</div>
+		
+	</body>
+</html>

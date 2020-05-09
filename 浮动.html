@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 块元素 水平排布 可以脱离文档流 
+				float 使元素浮动 脱离文档流
+				- right 向页面右侧浮动
+				- left 向页面左侧浮动
+				尽量往左上或者右上浮动 遇到父元素边框或者其他浮动元素就停止 浮动后 他下边的元素会向上浮动*/
+			.box1 {
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				/* float: right; */
+			}
+			/* 如果浮动元素 上面是一个没有浮动的块元素 则浮动不会超过块元素 */
+			.box2 {
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+				float: right;
+			}
+			
+			/* 浮动元素不会超过他的兄弟元素 最多相等 */
+			.box3 {
+				width: 100px;
+				height: 100px;
+				background-color: green;
+				float: right; 
+			}
+			
+			#box4 {
+				width: 100px;
+				height: 100px;
+				background-color: #bfa;
+				float: left;
+			}
+			/* 浮动不会盖住文字 用来做文字环绕图片的效果  */
+			#p1 {
+				height: 100px;
+				background-color: #baf;
+			}
+			
+			/* 在文档流中 宽度默认占父元素100% */
+			.box5 {
+				height: 100px;
+				background-color: #baf;
+				/* 脱离文档流 宽高都被内容撑开 */
+				float: left;
+			}
+			.s1 {
+				width: 100px;
+				height: 100px;
+				background-color: #bfa;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<div id="box4"></div>
+		<p id="p1">我是开始，很多很多字很多很多字很多很多很多字很多很多字很多很多字很多很多字很多很多字很多很多字很多很多字很多很多字很多字很多很多字很多很多字很多很多字很多很多字很多很多字很多很多字</p>
+		<div class="box5"></div>
+		<span class="s1">hello</span>
+	</body>
+</html>
