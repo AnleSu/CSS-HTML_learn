@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.box1 {
+				border: 10px red solid;
+				
+				/* 1. 可以父元素高度写死 避免塌陷 但是不能自适应子元素高度
+				   2. 根据W3C标准 每一个元素都有一个隐含属性Block Formatting Context 简称BFC 可以设置打开或者关闭 默认关闭 
+						开启BFC  
+						- 父元素的垂直外边距 不会和子元素重叠
+						- 不会被浮动元素覆盖 
+						- 可以包含浮动的子元素
+						*/
+				
+				/* 开启BFC 
+				1. 设置元素浮动  (会导致父元素宽度丢失 而且也会导致下边元素上移 不能解决问题)
+				2. 设置元素绝对定位 （同1）
+				3. 设置display 为inline-block  (可以解决问题 但是也会导致父元素宽度丢失)
+				4. overflow 设置为非visible  （推荐hidden 副作用最小  ）
+				*/
+				/* display: inline-block; */
+				overflow: hidden;
+				
+				/* 但是IE6以及以下的浏览器 不支持BFC
+				   有另外一个隐含属性 hasLayout 和 BFC 类似
+				   开启方式很多 副作用最小的是 
+					- zoom: 1  放大1倍
+				*/
+				zoom: 1;
+			}
+			
+			.box2 {
+				width: 100px;
+				height: 100px;
+				background-color: skyblue;
+				
+				/* 文档流中 父元素默认高度是被子元素撑开的 */
+				
+				/* 设置浮动 为子元素设置浮动以后 子元素完全脱离文档流 导致父元素高度塌陷 
+					*/
+				float: left;
+			}
+			
+			/* 由于box1 高度塌陷 导致下面元素往上移动 布局错乱 */
+			.box3 {
+				width: auto;
+				height: 100px;
+				background-color: yellow;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<div class="box2">
+				a
+			</div>
+		</div>
+		
+		<div class="box3"></div>
+	</body>
+</html>
