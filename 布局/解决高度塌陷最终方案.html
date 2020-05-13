@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.box1 {
+				border: 1px solid red;
+				
+			}
+			.box2 {
+				float: left;
+				width: 100px;
+				height: 100px;
+				background-color: #0000FF;
+			}
+			
+			/* 解决高度塌陷： 在高度塌陷的父元素最后 添加一个空白的div 再对其进行清除浮动
+					这样可以通过这个空白的div 撑开父元素的高度 基本无副作用 而且兼容各种浏览器
+			  -  这种方式 会在HTML中添加多余的结构 为了解决样式的问题 （w3c推荐的方式）
+			*/
+			.box3 {
+				clear: both;
+			}
+			
+			.box4 {
+				border: 1px solid red;
+				
+			}
+			.box5 {
+				float: left;
+				width: 100px;
+				height: 100px;
+				background-color: #0000FF;
+			}
+			
+			/* 最终解决方案：
+				- 用伪类 通过CSS 在box4最后 添加空白结构 然后清除浮动  和上面的方案原理相同
+				  而且不需要在页面中添加多余无用的结构
+				- 添加一个通用class clearfix  在页面需要解决高度塌陷的地方 添加这个class
+			*/
+			.clearfix:after {
+				content: "";
+				display: block;
+				clear: both;
+				
+			}
+			/* 兼容IE6 */
+			.clearfix {
+				zoom: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<div class="box2"></div>
+			<div class="box3"></div>
+		</div>
+		
+		<hr >
+		
+		<div class="box4 clearfix">
+			<div class="box5"></div>
+			<div class="box6"></div>
+		</div>
+	</body>
+</html>
