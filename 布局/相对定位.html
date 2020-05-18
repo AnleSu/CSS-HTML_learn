@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.box1 {
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				position: relative;
+			}
+			.box2 {
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+				/* 
+				 定位：元素放在页面指定位置
+				 - static 默认 不开启定位
+				 - relative 相对定位
+				 - absolute 绝对定位
+				 - fixed  固定定位
+				 开启元素定位（设置为非static） 
+				 1.可以通过 left  right top bottom 设置偏移量
+				 2.不会脱离文档流 位置移走了 但是之前的位置也占着  不会改变元素性质 块还是快 内联还是内联
+				 3. 会使元素提升一个层级
+				 */
+				
+				position: relative;
+				/* 相对于元素在文档流中原来的位置进行定位 */
+				left: 100px;
+				top: 200px;
+			}
+			.box3 {
+				width: 200px;
+				height: 200px;
+				background-color: yellowgreen;
+			}
+			
+			.s1 {
+				position: relative;
+				background-color: lightgoldenrodyellow;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- div.box$*3  快速创建 -->
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		
+		<span class="s1">我是一个span</span>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+.box1 {
+				width: 500px;
+				height: 500px;
+				padding: 0px auto ;
+				background-color: #bfa;
+				
+				
+				/* 相对路径写在哪儿 就相对哪个文件夹 */
+				background-image: url(../../img/东风破2.png);
+			}
