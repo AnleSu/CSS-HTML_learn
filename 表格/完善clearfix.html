@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.box1 {
+				width: 300px;
+				height: 300px;
+				background-color: #BBFFAA;
+			}
+			
+			.box2 {
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+				/* 父子元素 垂直外边距重叠  子元素外边距传递给父元素 */
+				margin-top: 100px;
+			}
+			/* 通过CSS 添加table  */
+			.box1::before{
+				content: "";
+				display: table;
+			}
+			
+			
+			/* 高度塌陷问题 最终解决方案 同时也可以解决外边距重叠*/
+			.clearfix::before,
+			.clearfix::after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+			.clearfix {
+				zoom: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<!-- 使用空的table 可以隔离父子元素外边距重叠 -->
+			<!-- <table >
+				
+			</table> -->
+			<div class="box2"></div>
+		</div>
+		
+	</body>
+</html>

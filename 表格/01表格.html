@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			table {
+				width: 300px;
+				margin: 0 auto ;
+				/* table td边框之间默认有距离 */
+				border-spacing: 0;
+				/* 边框合并  则border-spacing失效 */
+				border-collapse: collapse;
+			}
+			
+			td ,th{
+				border: 1px solid black;
+			}
+			/* 隔行变色 */
+			/* table > tr  这里找不到tr  因为tr并不是table的子元素 中间隔着一层tbody */
+			tr:nth-child(even) {
+				background-color: #F5F5F5;
+			}
+			/* 鼠标移入 */
+			tr:hover {
+				background-color: #FFFF00;
+			}
+		</style>
+	</head>
+	<body>
+		<table border="" cellspacing="" cellpadding="" width="40%">
+			
+			<tr>
+				<td>Data</td>
+				<td>Data</td>
+				<td>Data</td>
+				<td>Data</td>
+				<td>Data</td>
+
+			</tr>
+			<tr>
+				<td>Data</td>
+				<td>Data</td>
+				<td>Data</td>
+				<td>Data</td>
+				<!-- 纵向合并单元格 -->
+				<td rowspan="2">Data</td>
+
+			</tr>
+			<tr>
+				<td>Data</td>
+				<td>Data</td>
+				<td>Data</td>
+				<td>Data</td>
+
+			</tr>
+			<tr>
+				<td>Data</td>
+				<td>Data</td>
+				<td>Data</td>
+				<!-- colspan 横向合并单元格 -->
+				<td colspan="2">Data</td>
+
+
+			</tr>
+
+		</table>
+		<br />
+		<table >
+			<tr>
+				<th>学号</th>
+				<th>姓名</th>
+				<th>性别</th>
+				<th>住址</th>
+			</tr>
+			<tr>
+				<td>学号</td>
+				<td>姓名</td>
+				<td>性别</td>
+				<td>住址</td>
+			</tr>
+			<tr>
+				<td>学号</td>
+				<td>姓名</td> 
+				<td>性别</td>
+				<td>住址</td>
+			</tr>
+			<tr>
+				<td>学号</td>
+				<td>姓名</td>
+				<td>性别</td>
+				<td>住址</td>
+			</tr>
+			<tr>
+				<td>学号</td>
+				<td>姓名</td>
+				<td>性别</td>
+				<td>住址</td>
+			</tr>
+			<tr>
+				<td>学号</td>
+				<td>姓名</td>
+				<td>性别</td>
+				<td>住址</td>
+			</tr>
+			<tr>
+				<td>学号</td>
+				<td>姓名</td>
+				<td>性别</td>
+				<td>住址</td>
+			</tr>
+			<tr>
+				<td>学号</td>
+				<td>姓名</td>
+				<td>性别</td>
+				<td>住址</td>
+			</tr>
+			<tr>
+				<td>学号</td>
+				<td>姓名</td>
+				<td>性别</td>
+				<td>住址</td>
+			</tr>
+			<tr>
+				<td>学号</td>
+				<td>姓名</td>
+				<td>性别</td>
+				<td>住址</td>
+			</tr>
+			
+		</table>
+	</body>
+</html>

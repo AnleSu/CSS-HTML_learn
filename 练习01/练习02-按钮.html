@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 
+			 第一次切换图片时，图片会有一个非常快的闪烁 ，用户体验不佳
+			 原因：
+			 1. 网页本身要发一次请求 每一个外部资源都要单独发一次请求
+			 2. 三个图片不是同时加载 需要时才加载 所以初始网页只加载了link.png  而hover active在触发这两种状态时才去加载
+			 3.加载图片需要一定时间 所以在加载和显示过程中 会有一段时间背景图片无法显示 出现闪烁
+			 
+			 解决方案（CSS-Sprite）：
+			 1.三张图片整合在一张图片中 一次加载完成
+			 2.通过position切换图片位置 
+			 3. 减少图片总大小  提高请求速度
+			 
+			 */
+			.btn:link{
+				display: block;
+				/* background-image: url(../img/btn/link.png);*/
+				background-image: url(../img/btn/btn.png);
+				background-repeat: no-repeat;
+				width: 93px;
+				height: 29px;
+				
+			}
+			.btn:hover {
+				/* background-image: url(../img/btn/hover.png); */
+				/* 设置图片位置 左移到中间hover状态的图片 */
+				background-position: -93px 0px;
+			}
+			.btn:active {
+				/* background-image: url(../img/btn/active.png);*/
+				background-position: -186px 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#" class="btn"></a>
+	</body>
+</html>

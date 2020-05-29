@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 表头 	主体 	底部
+			 thead  tbody   tfoot
+			 
+			 如果表格中没有tbody  浏览器会自动添加tbody  并且将所有tr都放在tbody中
+			 所以 tr并不是table的子元素 中间隔着一层tbody-->
+		<table >
+			<!-- thead 内容显示在表格头部 及时写在最下边 也显示在头部  tfoot同理 显示在底部
+			
+			 -->
+			<thead>
+				<tr>
+					<th>日期</th>
+					<th>收入</th>
+					<th>支出</th>
+					<th>合计</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>2019.06.10</td>
+					<td>10000</td>
+					<td>2000</td>
+					<td>8000</td>
+				</tr>
+				
+				<tr>
+					<td>2019.06.10</td>
+					<td>10000</td>
+					<td>2000</td>
+					<td>8000</td>
+				</tr>
+				<tr>
+					<td>2019.06.10</td>
+					<td>10000</td>
+					<td>2000</td>
+					<td>8000</td>
+				</tr>
+				<tr>
+					<td>2019.06.10</td>
+					<td>10000</td>
+					<td>2000</td>
+					<td>8000</td>
+				</tr>
+				
+				<tr>
+					<td>2019.06.10</td>
+					<td>10000</td>
+					<td>2000</td>
+					<td>8000</td>
+				</tr>
+				
+				
+			
+			</tbody>
+			
+			<tfoot>
+				<td></td>
+				<td></td>
+				<td>合计</td>
+				<td>200000</td>
+			</tfoot>
+		</table>
+	</body>
+</html>

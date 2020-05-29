@@ -34,15 +34,21 @@
 			body {
 				background-image: url(../img/东风破2.png);
 				/* 设置背景图片是否和页面其他元素一起滚动 
-				fixed: 固定在某一位置 不随页面滚动
+				fixed: 固定在某一位置 不随页面滚动  背景图片定位相对于浏览器窗口 
 				scroll : 滚动
 				*/
 				background-attachment: fixed;
 				background-repeat: no-repeat;
 			}
+			.box2 {
+				width: 500px;
+				/* 简写 不设置就用默认值*/
+				background: url(../img/2.gif) repeat fixed center;
+			}
 		</style>
 	</head>
 	<body style="height: 5000px;">
 		<div class="box1"></div>
+		<div class="box2"></div>
 	</body>
 </html>
